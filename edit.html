@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- OWN CSS -->
+    <link rel="stylesheet" href="styling/main.css">
+    <link rel="stylesheet" href="styling/profile.css">
+    <link rel="stylesheet" href="styling/header.css">
+
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/b7d9f56fc5.js" crossorigin="anonymous"></script>
+
+    <!-- JQUERY -->
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-1">
+        <div class="container-fluid ps-4 pe-4">
+            <a class="navbar-brand" href="profile.html"><img src="img/blue.png" alt="" width="120"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mynavbar" id="navbarSupportedContent">
+                <form class="d-flex" action="searchresult.html" method="get">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i
+                                class="fa-solid fa-house-chimney me-2 text-primary"></i></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-users me-2 text-primary"></i>My Network</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-briefcase me-2 text-primary"></i>Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-message me-2 text-primary"></i>Message</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-bell me-2 text-primary"></i>Notifications</a>
+                    </li>
+                    <li class="nav-item text-center d-lg-none d-block">
+                        <a href="profile.html"
+                            class="btn border-primary border-2 text-primary rounded-pill text-decoration-none">View
+                            Your Profile</a>
+                        <hr>
+
+                    </li>
+                    <li class="nav-item text-center d-lg-none d-block">
+                        <a href="loginForm.html">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
+                </ul>
+                <span class="nav-profile d-lg-flex d-none" id="show-pf">
+                    <img src="img/profile.jpg" alt="">
+                    <h6>Me</h6>
+                    <i class="fa-solid fa-caret-down fs-3 shrink cs-p"></i>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="profile-popup" id="config-pf">
+        <h5>Asep Supriyadi</h5>
+        <p>Software Engineer</p>
+        <hr>
+        <a href="profile.html" class="btn border-primary border-2 text-primary rounded-pill text-decoration-none">View
+            Your Profile</a>
+        <hr>
+        <a href="loginForm.html">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+    </div>
+
+
+
+    <div class="container-fluid bg-light p-2 border border-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 d-flex align-items-center">
+                    <div class="xs-profile me-3">
+                        <h1><span>A</span><span>S</span></h1>
+                    </div>
+                    <div>
+                        <h6 class="m-0"><b>Asep Supriyadi</b></h6>
+                        <p class="m-0">Student at Sekolah Tinggi Teknologi Bandung</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container bg-light shadow p-4 mt-5 mb-5 rounded">
+
+
+        <div class="row d-flex justify-content-between align-items-center">
+            <div class="col-lg-2">
+                <h3 class="w-50"><b>Education</b></h3>
+            </div>
+
+            <div class="col-lg-1 text-center shrink">
+                <i class="fa-solid fa-plus fs-2" data-bs-toggle="modal" data-bs-target="#addMdl"></i>
+            </div>
+        </div>
+
+        <!-- REPEAT ELEMENT -->
+        <div class="row d-flex justify-content-between align-items-center border-bottom border-top border-1 my-3 py-3">
+
+            <!-- CONTENT -->
+            <div class="d-flex col-5 align-items-center">
+                <div class="bg-white p-2 me-3 shadow">
+                    <img src="img/harvard.png" alt="" style="height: 70px;">
+                </div>
+                <div>
+                    <h5 class="m-0">Sekolah Tinggi Teknologi</h5>
+                    <p class="m-0">Software Engineer</p>
+                    <small class="m-0"> <span>2022-10-12</span> - <span>2022-10-12</span> </small>
+                </div>
+            </div>
+
+            <!-- BUTTON -->
+            <div class="col-lg-1 text-center">
+                <i class="fa-solid fa-pen-to-square fs-4 text-primary shrink" data-bs-toggle="modal"
+                    data-bs-target="#editMdl"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ADD Modal -->
+    <div class="modal fade" id="addMdl" tabindex="-1" aria-labelledby="addLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Education</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="">
+                    <div class="modal-body ">
+                        <div class="form-group mb-2">
+                            <label for="university" class="mb-2">University Name : </label>
+                            <input class="form-control" type="text" name="university">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="university" class="mb-2">Majored In : </label>
+                            <input class="form-control" type="text" name="university">
+                        </div>
+                        <div class="d-flex">
+                            <div class="form-group mb-2 me-3">
+                                <label for="university" class="mb-2">Start Date : </label>
+                                <input class="form-control" type="date" name="start_date">
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="university" class="mb-2">End Date : </label>
+                                <input class="form-control" type="date" name="end_date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="editMdl" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Education</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="">
+                    <div class="modal-body ">
+                        <div class="form-group mb-2">
+                            <label for="university" class="mb-2">University Name : </label>
+                            <input class="form-control" type="text" name="university">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="university" class="mb-2">Majored In : </label>
+                            <input class="form-control" type="text" name="university">
+                        </div>
+                        <div class="d-flex">
+                            <div class="form-group mb-2 me-3">
+                                <label for="university" class="mb-2">Start Date : </label>
+                                <input class="form-control" type="date" name="start_date">
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="university" class="mb-2">End Date : </label>
+                                <input class="form-control" type="date" name="end_date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="checkElement.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+
+        document.querySelector("#tombol-overlay").addEventListener('click', function (e) {
+            history.pushState({ overlay: true }, "Judul Halaman Baru", "/edit");
+        });
+
+    </script>
+    <script>
+
+
+        $(document).ready(function () {
+
+            // EDIT MODAL
+            var curBodyWidth = $('body').width();
+            var bodyWithScroll;
+
+
+            $("#edit-modal").hide();
+            $('#edit-mdl-btn').click(function () {
+                $('#edit-modal').show();
+                $('body').css('overflow', 'hidden');
+                // bodyWithScroll = $('body').width() - curBodyWidth;
+                $('body').css('margin-right', 1.3 + "vw");
+
+
+
+
+
+            });
+            $('#close-edit').click(function () {
+                $('#edit-modal').hide();
+                $('body').css('overflow', 'auto');
+                $('body').css('margin-right', 0)
+            });
+
+
+            // ADD MODAL
+            $("#add-modal").hide();
+            $('#add-mdl-btn').click(function () {
+                $('#add-modal').show();
+                $('body').css('overflow', 'hidden');
+                // bodyWithScroll = $('body').width() - curBodyWidth;
+                $('body').css('margin-right', 1.3 + "vw");
+
+            });
+
+            $('#close-add').click(function () {
+                $('#add-modal').hide();
+                $('body').css('overflow', 'auto');
+                $('body').css('margin-right', 0)
+            });
+
+            // PROFILE CONFIG
+            var showConfig = document.querySelector("#config-pf");
+
+
+            $("#config-pf").hide();
+            $('#show-pf').click(function () {
+                $('#config-pf').toggle();
+
+
+            });
+
+
+
+
+
+
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>

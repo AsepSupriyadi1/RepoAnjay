@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/b7d9f56fc5.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <style>
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            #section-to-print,
+            #section-to-print * {
+                visibility: visible;
+            }
+
+            #section-to-print {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+
+
+        }
+
+        .print-btn {
+            height: 5em;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+
+        }
+
+        .print-btn:hover {
+            animation: scale-up-center .2s ease-in-out both;
+        }
+
+
+        @keyframes scale-up-center {
+            0% {
+                transform: scale(1)
+            }
+
+            100% {
+                transform: scale(1.2)
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+    <img src="img/printbtn.png" alt="button" onclick="demoFromHTML()" class="print-btn">
+
+
+    <div id="section-to-print" style="width: 100%;">
+        <div class="container my-5">
+
+
+
+            <div class="mb-5 text-center">
+                <img src="img/blue.png" alt="" style="height: 30px;" class="mb-3">
+                <h2 class="mb-3">ABC JOBS - ALL USERS</h2>
+                <b>All Register user 2023-10-34 until 2023-10-34</b>
+            </div>
+
+
+            <table class="table table-striped border border-2">
+                <thead>
+                    <tr class="bg-primary text-light">
+                        <th scope="col">No</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Gmail</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Education</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Asep Supriyadi</td>
+                        <td>asepsupyad789@gmail.com</td>
+                        <td>Software Engineering</td>
+                        <td>
+
+                            <ol>
+                                <li>Harvard, Software Engineering</li>
+                                <li>Harvard, Software Engineering</li>
+                                <li>Harvard, Software Engineering</li>
+                                <li>Harvard, Software Engineering</li>
+                            </ol>
+
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Asep Supriyadi</td>
+                        <td>asepsupyad789@gmail.com</td>
+                        <td>Software Engineering</td>
+                        <td>
+
+                            <ol>
+                                <li>Harvard, Software Engineering</li>
+                                <li>Harvard, Software Engineering</li>
+                                <li>Harvard, Software Engineering</li>
+                                <li>Harvard, Software Engineering</li>
+                            </ol>
+
+                        </td>
+
+
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function demoFromHTML() {
+            document.title = 'ABC JOB - ALL REGISTER USERS';
+            window.print();
+        }
+    </script>
+</body>
+
+</html>

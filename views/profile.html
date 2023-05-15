@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- OWN CSS -->
+    <link rel="stylesheet" href="styling/main.css">
+    <link rel="stylesheet" href="styling/profile.css">
+    <link rel="stylesheet" href="styling/header.css">
+
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/b7d9f56fc5.js" crossorigin="anonymous"></script>
+
+    <!-- JQUERY -->
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-1">
+        <div class="container-fluid ps-4 pe-4">
+            <a class="navbar-brand" href="profile.html"><img src="img/blue.png" alt="" width="120"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mynavbar" id="navbarSupportedContent">
+                <form class="d-flex" action="searchresult.html" method="get">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i
+                                class="fa-solid fa-house-chimney me-2 text-primary"></i></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-users me-2 text-primary"></i>My Network</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-briefcase me-2 text-primary"></i>Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-message me-2 text-primary"></i>Message</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-bell me-2 text-primary"></i>Notifications</a>
+                    </li>
+                    <li class="nav-item text-center d-lg-none d-block">
+                        <a href="profile.html"
+                            class="btn border-primary border-2 text-primary rounded-pill text-decoration-none">View
+                            Your Profile</a>
+                        <hr>
+
+                    </li>
+                    <li class="nav-item text-center d-lg-none d-block">
+                        <a href="loginForm.html">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
+                </ul>
+                <span class="nav-profile d-lg-flex d-none" id="show-pf">
+                    <img src="img/profile.jpg" alt="">
+                    <h6>Me</h6>
+                    <i class="fa-solid fa-caret-down fs-3 shrink cs-p"></i>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="profile-popup" id="config-pf">
+        <h5>Asep Supriyadi</h5>
+        <p>Software Engineer</p>
+        <hr>
+        <a href="profile.html" class="btn border-primary border-2 text-primary rounded-pill text-decoration-none">View
+            Your Profile</a>
+        <hr>
+        <a href="loginForm.html">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+    </div>
+
+
+    <!-- TOP CONTENT -->
+    <div class="container-fluid head-body m-0 border-bottom border-4 gradient-1">
+
+        <div class="d-flex align-items-center flex-column">
+
+            <div class="col-lg-10 col-12">
+                <div class="img-container">
+                    <img src="img/bg-01.jpg" alt="this is img">
+                </div>
+            </div>
+
+            <div class="col-lg-9 col-sm-12 pb-5">
+
+                <div class="d-flex flex-column flex-lg-row justify-content-between">
+
+                    <div class="col-lg-7 col-sm-12">
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-lg-start align-items-center ">
+                            <img src="img/profile.jpg" class="rounded-pill profile-img" alt="">
+                            <div class=" text-lg-start p-3 text-center">
+                                <h2 class="fw-bold" style="font-size: 1.7em;">Asep Supriyadi</h2>
+                                <p class="m-0">I'm a Full Stack Developer at Amazon</p>
+                                <p class="m-0 text-secondary"><span>Bandung</span>, <span>Indonesia</span></p>
+                                <p class="text-primary m-0">500+ Connections</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-5 col-12 text-lg-end align-self-end text-center">
+                        <button class="btn border-primary border-2" id="add-mdl-btn">
+                            <span class="pe-3">
+                                <i class="fa-regular fa-square-plus"></i>
+                            </span>Add Profile Section</button>
+
+                        <button class="btn btn-primary p-2" id="edit-mdl-btn">
+                            <span class="pe-2">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </span>Edit Profile</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="container-fluid m-0 mt-3 mb-3">
+
+        <div class="d-flex flex-lg-row justify-content-center flex-column align-items-center align-items-lg-start">
+
+            <div class="col-11 col-lg-10  p-2">
+
+                <div class="row gy-4 d-flex flex-column flex-lg-row justify-content-around">
+
+
+                    <!-- LEFT SIDE -->
+                    <div class="d-none col-lg-7 bg-light rounded shadow" style="height:fit-content;" id="left-side">
+                        <div class="row m-0 p-4 gx-0">
+                            <div class="col-12">
+                                <h2 class="fw-bold">About Me</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur provident
+                                    itaque, fugiat nam deserunt eveniet, exercitationem ullam omnis corporis, officiis
+                                    dolorem rerum! Dolorem consectetur magnam blanditiis harum aspernatur, quae,
+                                    laudantium omnis esse repellendus dolore sequi assumenda, quisquam consequatur
+                                    minima pariatur et. Architecto voluptatum provident qui ea, saepe consequuntur quam
+                                    quasi ipsam eligendi obcaecati dicta voluptatem odit, natus placeat. Facilis
+                                    asperiores natus beatae doloribus saepe sit ratione cumque similique a minus
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT SIDE -->
+                    <div class="col-lg-4 bg-light p-4 rounded shadow" id="right-side">
+                        <h3 class="fw-bold">Add To Your Feed</h3>
+                        <div class="d-flex flex-row flex-wrap">
+                            <div class="d-flex flex-row flex-lg-row p-3 align-items-center">
+                                <img src="img/p.jpg" alt="profile" class="small-profile rounded-pill me-3">
+                                <div>
+                                    <h5 class="m-0 fs-6">Shima Rin</h5>
+                                    <p class="m-0 mb-2 fw-lighter">UI Designer</p>
+                                    <button class="btn-sm btn-primary  rounded-pill"
+                                        style="width: 100px; border: none;">Connect</button>
+                                </div>
+                            </div>
+                            <div class="d-flex p-3 align-items-center">
+                                <img src="img/p2.jpg" alt="profile" class="small-profile rounded-pill me-3">
+                                <div>
+                                    <h5 class="m-0 fs-6">Kanna Kamui</h5>
+                                    <p class="m-0 mb-2 fw-lighter">UI Designer</p>
+                                    <button class="btn-sm btn-primary  rounded-pill"
+                                        style="width: 100px; border: none;">Connect</button>
+                                </div>
+                            </div>
+                            <div class="d-flex p-3 align-items-center">
+                                <img src="img/p3.jpg" alt="profile" class="small-profile rounded-pill me-3">
+                                <div>
+                                    <h5 class="m-0 fs-6">Goto Hitori</h5>
+                                    <p class="m-0 mb-2 fw-lighter">UI Designer</p>
+                                    <button class="btn-sm btn-primary  rounded-pill"
+                                        style="width: 100px; border: none;">Connect</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- EDIT SECTION -->
+    <div class="popup pt-5 p-3" id="edit-modal">
+
+        <div class=" d-flex flex-column align-items-center popup-content">
+
+            <div class="shadow col-md-5 p-4 bg-light popup-content" style="border-radius: 10px; height: 85vh;">
+
+                <div class="row">
+
+                    <div class="col-12 d-flex justify-content-between border-bottom border-1">
+                        <h3 class="text-dark fw-bold mb-3">Edit Profile Intro</h3>
+                        <i id="close-edit" class="shrink fs-1 fa-sharp fa-regular fa-circle-xmark"></i>
+                    </div>
+
+
+                    <div class="col-12">
+                        <form action="#" method="post" class="p-4">
+
+                            <div class="row justify-content-between">
+                                <div
+                                    class="form-group mb-4 p-1 flex-column justify-content-center flex-lg-row d-flex align-items-center">
+                                    <img src="img/profile.jpg" alt="" class="rounded-pill" width="100">
+                                    <input type="file" class="form-control inp-txt-light m-2" name="firstname" required>
+                                </div>
+                            </div>
+
+                            <div class="row d-flex justify-content-between">
+                                <div class="form-group mb-1 p-1">
+                                    <label for="" class="ps-1 pb-2">Full Name*</label>
+                                    <input type="email" class="form-control inp-txt-light p-2 ps-3"
+                                        placeholder="Your name" name="email" required>
+                                </div>
+                            </div>
+
+                            <div class="row d-flex justify-content-between">
+                                <div class="form-group mb-1 p-1">
+                                    <label for="" class="ps-1 pb-2">Headline*</label>
+                                    <input type="email" class="form-control inp-txt-light p-2 ps-3"
+                                        placeholder="I'm a Programer" name="email" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-1" style="width: 60%;">
+                                <label for="" class="ps-2 pb-2">City*</label>
+                                <div class="form-group p-1">
+                                    <select class="form-select" name="country">
+                                        <option selected>Country</option>
+                                        <option value="Indonesia">Indonesia</option>
+                                        <option value="Singapore">Singapore</option>
+                                        <option value="India">India</option>
+                                        <option value="Philipines">Philipines</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </form>
+
+
+
+                    </div>
+
+
+
+                    <div class="col-12 d-flex justify-content-end border-top border-1 pt-3">
+                        <button class="btn btn-primary rounded-pill p-2 w-50" type="submit">SAVE</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ADD SECTION -->
+    <div class="popup pt-5 p-3" id="add-modal">
+
+        <div class=" d-flex flex-column align-items-center popup-content">
+
+            <div class="shadow col-md-7 p-4 bg-light popup-content" style="border-radius: 10px; height: 85vh;">
+
+                <div class="row">
+
+                    <div class="col-12 d-flex justify-content-between border-bottom border-1">
+                        <h3 class="text-dark fw-bold mb-3">Add Profile Section</h3>
+                        <i id="close-add" class="shrink fs-1 fa-sharp fa-regular fa-circle-xmark"></i>
+                    </div>
+
+
+                    <div class="col-10 mx-auto pt-4 pb-4">
+                        <div class="row d-flex justify-content-evenly flex-wrap gy-3">
+
+                            <a href="edit/add-licenses.html" class="text-decoration-none d-block col-lg-12">
+                                <div
+                                    class="d-flex flex-column text-dark p-4 border border border-2 text-center rounded">
+                                    <i class="fa-sharp fa-solid fa-certificate mb-3 shrink" style="font-size: 4em;"></i>
+                                    <h4>Lisences & Certifications</h4>
+                                </div>
+                            </a>
+
+
+                            <a href="edit/add-about.html" class="text-decoration-none d-block col-lg-6 add-section">
+                                <div
+                                    class="d-flex flex-column text-dark p-4 border border border-2 text-center rounded">
+                                    <i class="fa-solid fa-circle-info mb-3 shrink" style="font-size: 4em;"></i>
+                                    <h4>About</h4>
+                                </div>
+                            </a>
+
+                            <a href="edit/add-education.html" class="text-decoration-none d-block col-lg-6 add-section">
+                                <div
+                                    class="d-flex flex-column text-dark p-4 border border border-2 text-center rounded">
+                                    <i class="fa-solid fa-school mb-3 shrink" style="font-size: 4em;"></i>
+                                    <h4>Education</h4>
+                                </div>
+                            </a>
+
+                            <a href="edit/add-experience.html"
+                                class="text-decoration-none d-block col-lg-6 add-section">
+                                <div
+                                    class="d-flex flex-column text-dark p-4 border border border-2 text-center rounded">
+                                    <i class="fa-sharp fa-solid fa-briefcase mb-3 shrink" style="font-size: 4em;"></i>
+                                    <h4>Experience</h4>
+                                </div>
+                            </a>
+
+
+                            <a href="edit/add-skill.html" class="text-decoration-none d-block col-lg-6 add-section">
+                                <div class="d-flex flex-column text-dark p-4 border border border-2 text-center">
+                                    <i class="fa-sharp fa-solid fa-code-branch mb-3 shrink" style="font-size: 4em;"></i>
+                                    <h4>Skill</h4>
+                                </div>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="checkElement.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+
+
+        $(document).ready(function () {
+
+            // EDIT MODAL
+            var curBodyWidth = $('body').width();
+            var bodyWithScroll;
+
+
+            $("#edit-modal").hide();
+            $('#edit-mdl-btn').click(function () {
+                $('#edit-modal').show();
+                $('body').css('overflow', 'hidden');
+                // bodyWithScroll = $('body').width() - curBodyWidth;
+                $('body').css('margin-right', 1.3 + "vw");
+
+
+
+
+
+            });
+            $('#close-edit').click(function () {
+                $('#edit-modal').hide();
+                $('body').css('overflow', 'auto');
+                $('body').css('margin-right', 0)
+            });
+
+
+            // ADD MODAL
+            $("#add-modal").hide();
+            $('#add-mdl-btn').click(function () {
+                $('#add-modal').show();
+                $('body').css('overflow', 'hidden');
+                // bodyWithScroll = $('body').width() - curBodyWidth;
+                $('body').css('margin-right', 1.3 + "vw");
+
+            });
+
+            $('#close-add').click(function () {
+                $('#add-modal').hide();
+                $('body').css('overflow', 'auto');
+                $('body').css('margin-right', 0)
+            });
+
+            // PROFILE CONFIG
+            var showConfig = document.querySelector("#config-pf");
+
+
+            $("#config-pf").hide();
+            $('#show-pf').click(function () {
+                $('#config-pf').toggle();
+
+
+            });
+
+
+
+
+
+
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>

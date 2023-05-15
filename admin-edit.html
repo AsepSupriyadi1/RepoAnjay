@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- OWN CSS -->
+    <link rel="stylesheet" href="styling/profile.css">
+    <link rel="stylesheet" href="styling/header.css">
+    <link rel="stylesheet" href="styling/admin.css">
+
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/b7d9f56fc5.js" crossorigin="anonymous"></script>
+
+    <!-- JQUERY -->
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <style>
+        .tab-active {
+            background-color: #92b6e5dc;
+            color: rgba(255, 255, 255, 0.832);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container main py-5 ">
+
+
+        <!-- HEADER -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="img/white.png" alt="" width="150"></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <h5 class="text-white"></h5>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item me-2">
+                            <a href="profile.html" class="btn btn-primary text-decoration-none btn-nav">Go Back</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="loginForm.html" class="btn btn-secondary btn-nav">Logout <i
+                                    class="fa-solid fa-right-from-bracket"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <div class="row px-3 mt-3 mx-auto">
+
+
+            <!-- LEFT SIDE -->
+            <div class="col-lg-3 dash-navigation-container">
+
+                <div class=" d-flex flex-lg-column flex-row dash-navigation">
+                    <a href="admin.html" class="btn navigation my-1 py-3 text-start"><i
+                            class="fa-sharp fa-solid fa-gauge px-4"></i>
+                        Dashboard</a>
+                    <a href="admin-viewuser.html" class="btn navigation my-1 py-3 text-start"><i
+                            class="fa-solid fa-users px-4"></i>
+                        View All Users</a>
+                    <a href="admin-email.html" class="btn navigation my-1 py-3 text-start active"><i
+                            class="fa-solid fa-envelopes-bulk px-4"></i>
+                        Send Bulk Email</a>
+                    <a href="admin-report.html" class="btn navigation my-1 py-3 text-start"><i
+                            class="fa-sharp fa-solid fa-print px-4"></i>
+                        Generate Report</a>
+
+                </div>
+
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="col right-side p-5 rounded">
+
+                <h3 class="text-white mb-3"><b>Edit User</b> - <span class="fw-lighter">Asep Supriyadi</span></h3>
+
+
+                <div class="row ps-2">
+
+
+                    <!-- TAB NAVIGATION -->
+                    <div class="d-flex border-bottom border-1 p-0 tab-nav-container">
+                        <button class="btn btn-tab">Details</button>
+                        <button class="btn btn-tab">Educations</button>
+                        <button class="btn btn-tab">Licenses</button>
+                        <button class="btn btn-tab">Skills</button>
+                        <button class="btn btn-tab">Experiences</button>
+                    </div>
+
+
+                    <!-- TAB BODY -->
+
+                    <!-- EDIT DETAILS -->
+                    <div class="row py-4  mx-auto tab-container shadow rounded">
+
+                        <h5 class="text-light mb-4">Edit User Details</h5>
+
+                        <form action="">
+
+
+                            <div class="d-flex flex-lg-row flex-column">
+                                <div class="form-group mb-3 text-light col-lg-6 pe-1">
+                                    <label for="firstName" class="mb-2">First Name : </label>
+                                    <input type="text" id="firstName" name="firstName" class="form-control">
+                                </div>
+                                <div class="form-group mb-3 text-light col-lg-6 pe-1">
+                                    <label for="lastName" class="mb-2">last Name : </label>
+                                    <input type="text" id="lastName" name="lastName" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3 text-light">
+                                <label for="country" class="mb-2">Country : </label>
+                                <select name="country" id="country" class="form-control">
+                                    <option value="">country</option>
+                                    <option value="">country</option>
+                                    <option value="">country</option>
+                                </select>
+                            </div>
+
+
+                            <div class="form-group mb-3 text-light">
+                                <label for="about" class="mb-2">About : </label>
+                                <textarea name="about" id="about" cols="30" rows="5" class="form-control"></textarea>
+                            </div>
+
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Save Changes </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+
+                    <!-- EDIT EDUCATION -->
+                    <div class="row py-4  mx-auto tab-container shadow rounded">
+
+                        <h5 class="text-light mb-4">Edit User Educations</h5>
+
+                        <div class="table-responsive p-0 px-3">
+
+                            <table class="table table-secondary table-striped table-hover my-table ">
+                                <thead>
+                                    <tr>
+                                        <th scope=" col">#</th>
+                                        <th scope="col">University Name</th>
+                                        <th scope="col">Majored</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Harvard</td>
+                                        <td>Software Engineer</td>
+                                        <td style="width: 35%;">
+
+                                            <button class=" btn mybtn-success" data-bs-toggle="modal"
+                                                data-bs-target="#editModal">
+                                                <i class="fa-solid fa-pen-to-square pe-3"></i>Edit</button>
+
+
+
+                                            <a class="btn mybtn-danger"><i class="fa-solid fa-trash pe-3"></i>Delete</a>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EDIT LICENSES -->
+                    <div class="row py-4  mx-auto tab-container shadow rounded">
+
+                        <h5 class="text-light mb-4">Edit User Licenses</h5>
+
+                        <div class="table-responsive p-0 px-3">
+
+                            <table class="table table-secondary table-striped table-hover my-table ">
+                                <thead>
+                                    <tr>
+                                        <th scope=" col">#</th>
+                                        <th scope="col">Licenses Name</th>
+                                        <th scope="col">Organization</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Linkedin Licenses</td>
+                                        <td>Linkedin</td>
+                                        <td style="width: 35%;">
+
+                                            <button class=" btn mybtn-success" data-bs-toggle="modal"
+                                                data-bs-target="#editModal">
+                                                <i class="fa-solid fa-pen-to-square pe-3"></i>Edit</button>
+
+
+
+                                            <a class="btn mybtn-danger"><i class="fa-solid fa-trash pe-3"></i>Delete</a>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EDIT SKILLS -->
+                    <div class="row py-4  mx-auto tab-container shadow rounded">
+
+                        <h5 class="text-light mb-4">Edit User Skills</h5>
+
+                        <div class="table-responsive p-0 px-3">
+
+                            <table class="table table-secondary table-striped table-hover my-table ">
+                                <thead>
+                                    <tr>
+                                        <th scope=" col">#</th>
+                                        <th scope="col">Skills Name</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>HTML, CSS, Bootstrap</td>
+                                        <td style="width: 35%;">
+
+                                            <button class=" btn mybtn-success" data-bs-toggle="modal"
+                                                data-bs-target="#editModal">
+                                                <i class="fa-solid fa-pen-to-square pe-3"></i>Edit</button>
+
+
+
+                                            <a class="btn mybtn-danger"><i class="fa-solid fa-trash pe-3"></i>Delete</a>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EDIT EXPERIENCE -->
+                    <div class="row py-4  mx-auto tab-container shadow rounded">
+
+                        <h5 class="text-light mb-4">Edit User Experiences</h5>
+
+                        <p>Experiences not available at this moment</p>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <footer class="text-center text-white">
+
+        copyright 2022 asep supriyadi
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+
+
+        $(document).ready(function () {
+
+            $('.tab-container:first').show();
+            $('.tab-nav-container button:first').addClass('tab-active');
+
+            $('.tab-nav-container button').click(function (event) {
+
+                index = $(this).index();
+                $('.tab-nav-container button').removeClass('tab-active');
+                $(this).addClass('tab-active');
+                $('.tab-container').hide();
+                $('.tab-container').eq(index).show();
+
+            });
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>

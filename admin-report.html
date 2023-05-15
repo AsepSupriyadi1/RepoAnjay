@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- OWN CSS -->
+    <link rel="stylesheet" href="styling/profile.css">
+    <link rel="stylesheet" href="styling/header.css">
+    <link rel="stylesheet" href="styling/admin.css">
+
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/b7d9f56fc5.js" crossorigin="anonymous"></script>
+
+    <!-- JQUERY -->
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container main py-5 ">
+
+
+        <!-- HEADER -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="img/white.png" alt="" width="150"></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <h5 class="text-white"></h5>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item me-2">
+                            <a href="profile.html" class="btn btn-primary text-decoration-none btn-nav">Go Back</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="loginForm.html" class="btn btn-secondary btn-nav">Logout <i
+                                    class="fa-solid fa-right-from-bracket"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <div class="row px-3 mt-3 mx-auto">
+
+
+            <!-- LEFT SIDE -->
+            <div class="col-lg-3 dash-navigation-container">
+
+                <div class=" d-flex flex-lg-column flex-row dash-navigation">
+                    <a href="admin.html" class="btn navigation my-1 py-3 text-start"><i
+                            class="fa-sharp fa-solid fa-gauge px-4"></i>
+                        Dashboard</a>
+                    <a href="admin-viewuser.html" class="btn navigation my-1 py-3 text-start"><i
+                            class="fa-solid fa-users px-4"></i>
+                        View All Users</a>
+                    <a href="admin-email.html" class="btn navigation my-1 py-3 text-start"><i
+                            class="fa-solid fa-envelopes-bulk px-4"></i>
+                        Send Bulk Email</a>
+                    <a href="admin-report.html" class="btn navigation my-1 py-3 text-start active"><i
+                            class="fa-sharp fa-solid fa-print px-4"></i>
+                        Generate Report</a>
+
+                </div>
+
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="col right-side p-4 rounded">
+
+                <h3 class="text-white mb-4"><b>Generate</b> <span class="fw-lighter">Reports</span></h3>
+                <div class="row px-2 text-light">
+
+                    <p class="">Fetch users according to the date range</p>
+                    <form action="">
+
+                        <div class="d-flex">
+
+                            <div class="form-group mb-3 me-3 w-50">
+                                <label for="start-date">Start Date : </label>
+                                <input type="date" id="start-date" name="start_date" class="form-control">
+                            </div>
+
+                            <div class="form-group mb-3 w-50">
+                                <label for="start-date">End Date : </label>
+                                <input type="date" id="start-date" name="start_date" class="form-control">
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-danger">Generate Reports</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <footer class="text-center text-white">
+
+        copyright 2022 asep supriyadi
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+
+
+        $(document).ready(function () {
+            // PROFILE CONFIG
+            var showConfig = document.querySelector("#config-pf");
+
+
+            $("#config-pf").hide();
+            $('#show-pf').click(function () {
+                $('#config-pf').toggle();
+
+
+            });
+
+        });
+
+
+    </script>
+</body>
+
+</html>

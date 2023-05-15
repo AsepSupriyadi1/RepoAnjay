@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background-color: #dcedfae7;
+    position: relative;
+}
+
+
+.inp-txt-light::placeholder {
+    color: rgb(127, 127, 127);
+}
+
+
+
+/* GRADIENT */
+.gradient-1 {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 17%, rgba(235, 235, 235, 1) 75%);
+}
+
+
+/* HOVER */
+.shrink:hover {
+    animation: scale-down-center .10s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+.navbar {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.cs-p {
+    cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .mynavbar {
+        flex-direction: column-reverse;
+    }
+
+    .mynavbar>form,
+    ul li {
+        padding: 10px 0px;
+    }
+}
+
+@keyframes scale-down-center {
+    0% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(0.75)
+    }
+}
